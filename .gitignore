@@ -21,6 +21,7 @@ out/
 # Gradle files
 .gradle/
 build/
+*-sample/gradle.properties
 
 # Local configuration file (sdk path, etc)
 local.properties
@@ -84,4 +85,7 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+
+# spotify .gitignore
+.DS_Store
 

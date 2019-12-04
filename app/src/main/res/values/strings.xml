@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="title_activity_remote_java">SDK Remote jv</string>
-    <string name="title_activity_remote_kotlin">SDK Remote kt</string>
-    <string name="app_name">Spotify SDK Demo</string>
+    <string name="label">MusicMe</string>
+    <string name="app_name">MusicMe</string>
 
     <!-- Errors -->
     <string name="err_spotify_disconnected">"Spotify is not Connected. Use one of the 'connect' buttons"</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.spotify.android.appremote.demo">
+    package="com.musicme">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -13,9 +13,9 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name="com.spotify.sdk.demo.RemotePlayerActivity"
+            android:name="com.musicme.RemotePlayerActivity"
             android:exported="true"
-            android:label="@string/title_activity_remote_java"
+            android:label="@string/label"
             android:screenOrientation="portrait"
             android:theme="@style/LauncherTheme">
             <intent-filter>

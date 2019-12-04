@@ -19,7 +19,9 @@
  * under the License.
  */
 
-package com.spotify.sdk.demo;
+package com.musicme;
+
+import com.musicme.R;
 
 import android.graphics.Color;
 import android.graphics.PorterDuff;
@@ -47,7 +49,6 @@ import com.spotify.android.appremote.api.ConnectionParams;
 import com.spotify.android.appremote.api.Connector;
 import com.spotify.android.appremote.api.ContentApi;
 import com.spotify.android.appremote.api.SpotifyAppRemote;
-import com.spotify.android.appremote.demo.R;
 import com.spotify.protocol.client.ErrorCallback;
 import com.spotify.protocol.client.Subscription;
 import com.spotify.protocol.types.Capabilities;
@@ -68,8 +69,10 @@ public class RemotePlayerActivity extends FragmentActivity {
 
   private static final String TAG = RemotePlayerActivity.class.getSimpleName();
 
-  private static final String CLIENT_ID = "089d841ccc194c10a77afad9e1c11d54";
-  private static final String REDIRECT_URI = "comspotifytestsdk://callback";
+//  private static final String CLIENT_ID = "089d841ccc194c10a77afad9e1c11d54";
+//  private static final String REDIRECT_URI = "comspotifytestsdk://callback";
+  public static final String CLIENT_ID = "5f2f2cd771174cfcb2e3a8433c47935c";
+  public static final String REDIRECT_URI = "musicme://auth/callback/";
 
   private static final String TRACK_URI = "spotify:track:4IWZsfEkaK49itBwCTFDXQ";
   private static final String ALBUM_URI = "spotify:album:4nZ5wPL5XxSY2OuDgbnYdc";

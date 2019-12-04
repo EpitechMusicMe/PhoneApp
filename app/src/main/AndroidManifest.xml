@@ -12,9 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SpotifyAuthActivity"></activity>
         <activity
-            android:name=".IntroActivity"
+            android:name="com.musicme.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/IntroTheme">
             <intent-filter>
@@ -23,7 +22,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+<!--        <activity android:name=".SpotifyAuthActivity"></activity>-->
+        <!--        <activity android:name=".MainActivity"></activity>-->
         <activity android:name=".BluetoothActivity"></activity>
     </application>
 

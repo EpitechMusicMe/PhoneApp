@@ -32,7 +32,7 @@
         android:layout_width="179dp"
         android:layout_height="174dp"
         android:contentDescription="Spotify Logo. Click to authenticate."
-        android:onClick="authenticateWithSpotify"
+        android:onClick="onClickSpotify"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -217,7 +217,7 @@ public class RemotePlayerActivity extends FragmentActivity {
 
   @Override
   protected void onCreate(final Bundle savedInstanceState) {
-    setTheme(R.style.AppTheme);
+//    setTheme(R.style.AppTheme);
     super.onCreate(savedInstanceState);
     setContentView(R.layout.app_remote_layout);
 

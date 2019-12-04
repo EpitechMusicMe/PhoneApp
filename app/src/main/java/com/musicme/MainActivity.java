@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.button_bluetooth:
                         intent = new Intent(MainActivity.this,BluetoothActivity.class);
                         startActivity(intent);
-                        finish();
+//                        finish();
                         break;
                 }
             }
@@ -80,8 +80,8 @@ public class MainActivity extends AppCompatActivity {
 //    }
 
     public void onClickSpotify(View view) {
-//        Intent intent = new Intent(MainActivity.this,BluetoothActivity.class);
-//        startActivity(intent);
+        Intent intent = new Intent(MainActivity.this, RemotePlayerActivity.class);
+        startActivity(intent);
 //        finish();
 
 //        // Set the connection parameters

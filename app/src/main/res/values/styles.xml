@@ -33,6 +33,7 @@
         <item name="android:navigationBarColor" tools:ignore="NewApi">@android:color/transparent
         </item>
         <item name="android:windowBackground">@drawable/window_background</item>
+<!--        <item name="android:windowBackground">@drawable/bg_launcher</item>-->
     </style>
 
 </resources>

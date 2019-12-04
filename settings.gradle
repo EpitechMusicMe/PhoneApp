@@ -1,4 +1,4 @@
 rootProject.name = 'MusicMe'
 include ':app'
-include ':app-remote-lib'
+include ':spotify-app-remote'
 include ':auth-lib'

@@ -27,7 +27,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
-public class BluetoothActivity extends AppCompatActivity{
+public class BluetoothActivity extends AppCompatActivity implements View.OnClickListener
+{
 
     TextView mTvBluetoothStatus;
     TextView mTvReceiveData;
@@ -65,7 +66,18 @@ public class BluetoothActivity extends AppCompatActivity{
         mBtnConnect = (Button)findViewById(R.id.btnConnect);
         mBtnSendData = (Button)findViewById(R.id.btnSendData);
 
+        // <global menu buttons
+        Button bMood = findViewById(R.id.buttonMood);
+        Button bMusic = findViewById(R.id.buttonMusic);
+        Button bSettings = findViewById(R.id.buttonSettings);
+
+        bMood.setOnClickListener(this);
+        bMusic.setOnClickListener(this);
+        bSettings.setOnClickListener(this);
+        // global menu buttons>
+
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+
 
 
         mBtnBluetoothOn.setOnClickListener(new Button.OnClickListener() {
@@ -111,15 +123,15 @@ public class BluetoothActivity extends AppCompatActivity{
     }
     void bluetoothOn() {
         if(mBluetoothAdapter == null) {
-            Toast.makeText(getApplicationContext(), "블루투스를 지원하지 않는 기기입니다.", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "This device does not support Bluetooth.", Toast.LENGTH_LONG).show();
         }
         else {
             if (mBluetoothAdapter.isEnabled()) {
-                Toast.makeText(getApplicationContext(), "블루투스가 이미 활성화 되어 있습니다.", Toast.LENGTH_LONG).show();
-                mTvBluetoothStatus.setText("활성화");
+                Toast.makeText(getApplicationContext(), "Bluetooth is already active.", Toast.LENGTH_LONG).show();
+                mTvBluetoothStatus.setText("Activation");
             }
             else {
-                Toast.makeText(getApplicationContext(), "블루투스가 활성화 되어 있지 않습니다.", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Bluetooth is not activated.", Toast.LENGTH_LONG).show();
                 Intent intentBluetoothEnable = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
                 startActivityForResult(intentBluetoothEnable, BT_REQUEST_ENABLE);
             }
@@ -128,11 +140,11 @@ public class BluetoothActivity extends AppCompatActivity{
     void bluetoothOff() {
         if (mBluetoothAdapter.isEnabled()) {
             mBluetoothAdapter.disable();
-            Toast.makeText(getApplicationContext(), "블루투스가 비활성화 되었습니다.", Toast.LENGTH_SHORT).show();
-            mTvBluetoothStatus.setText("비활성화");
+            Toast.makeText(getApplicationContext(), "Bluetooth is not activated.", Toast.LENGTH_SHORT).show();
+            mTvBluetoothStatus.setText("Deactivation");
         }
         else {
-            Toast.makeText(getApplicationContext(), "블루투스가 이미 비활성화 되어 있습니다.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Bluetooth is already deactivated.", Toast.LENGTH_SHORT).show();
         }
     }
     @Override
@@ -140,11 +152,11 @@ public class BluetoothActivity extends AppCompatActivity{
         switch (requestCode) {
             case BT_REQUEST_ENABLE:
                 if (resultCode == RESULT_OK) { // 블루투스 활성화를 확인을 클릭하였다면
-                    Toast.makeText(getApplicationContext(), "블루투스 활성화", Toast.LENGTH_LONG).show();
-                    mTvBluetoothStatus.setText("활성화");
+                    Toast.makeText(getApplicationContext(), "Bluetooth Activation", Toast.LENGTH_LONG).show();
+                    mTvBluetoothStatus.setText("Activation");
                 } else if (resultCode == RESULT_CANCELED) { // 블루투스 활성화를 취소를 클릭하였다면
-                    Toast.makeText(getApplicationContext(), "취소", Toast.LENGTH_LONG).show();
-                    mTvBluetoothStatus.setText("비활성화");
+                    Toast.makeText(getApplicationContext(), "Cancellation", Toast.LENGTH_LONG).show();
+                    mTvBluetoothStatus.setText("Deactivation");
                 }
                 break;
         }
@@ -156,7 +168,7 @@ public class BluetoothActivity extends AppCompatActivity{
 
             if (mPairedDevices.size() > 0) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setTitle("장치 선택");
+                builder.setTitle("Select Device");
 
                 mListPairedDevices = new ArrayList<String>();
                 for (BluetoothDevice device : mPairedDevices) {
@@ -175,11 +187,11 @@ public class BluetoothActivity extends AppCompatActivity{
                 AlertDialog alert = builder.create();
                 alert.show();
             } else {
-                Toast.makeText(getApplicationContext(), "페어링된 장치가 없습니다.", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "No paired device found.", Toast.LENGTH_LONG).show();
             }
         }
         else {
-            Toast.makeText(getApplicationContext(), "블루투스가 비활성화 되어 있습니다.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Bluetooth is already deactivated.", Toast.LENGTH_SHORT).show();
         }
     }
     void connectSelectedDevice(String selectedDeviceName) {
@@ -196,7 +208,7 @@ public class BluetoothActivity extends AppCompatActivity{
             mThreadConnectedBluetooth.start();
             mBluetoothHandler.obtainMessage(BT_CONNECTING_STATUS, 1, -1).sendToTarget();
         } catch (IOException e) {
-            Toast.makeText(getApplicationContext(), "블루투스 연결 중 오류가 발생했습니다.", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Error connecting to Bluetooth.", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -214,7 +226,7 @@ public class BluetoothActivity extends AppCompatActivity{
                 tmpIn = socket.getInputStream();
                 tmpOut = socket.getOutputStream();
             } catch (IOException e) {
-                Toast.makeText(getApplicationContext(), "소켓 연결 중 오류가 발생했습니다.", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Error connecting socket.", Toast.LENGTH_LONG).show();
             }
 
             mmInStream = tmpIn;
@@ -243,17 +255,38 @@ public class BluetoothActivity extends AppCompatActivity{
             try {
                 mmOutStream.write(bytes);
             } catch (IOException e) {
-                Toast.makeText(getApplicationContext(), "데이터 전송 중 오류가 발생했습니다.", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "An error occurred while transferring data.", Toast.LENGTH_LONG).show();
             }
         }
         public void cancel() {
             try {
                 mmSocket.close();
             } catch (IOException e) {
-                Toast.makeText(getApplicationContext(), "소켓 해제 중 오류가 발생했습니다.", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "An error occurred while releasing the socket.", Toast.LENGTH_LONG).show();
             }
         }
 
+    }
+    @Override
+    public void onClick(View v) {
+        Intent intent;
+        switch (v.getId()) {
+            case R.id.buttonMood:
+                intent = new Intent(this, EnterMoodActivity.class);
+                startActivity(intent);
+                finish();
+                break;
+            case R.id.buttonMusic:
+                intent = new Intent(this, MusicPlayerActivity.class);
+                startActivity(intent);
+                finish();
+                break;
+            case R.id.buttonSettings:
+                intent = new Intent(this, SettingActivity.class);
+                startActivity(intent);
+                finish();
+                break;
+        }
     }
 
 

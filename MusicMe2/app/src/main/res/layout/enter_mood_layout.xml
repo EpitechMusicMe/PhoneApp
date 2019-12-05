@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EnterMoodActivity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:columnCount="3"
+        android:rowCount="6"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_columnSpan="3"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:layout_gravity="fill_horizontal"
+            android:layout_marginTop="50dp"
+            android:text="How Do You Feel?"
+            android:gravity="center_horizontal"
+            android:textSize="25sp"/>
+
+        <Button
+            android:id="@+id/happy_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="17dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/happy_button_box"
+            android:drawableTop="@drawable/ic_happy_mood"
+            android:padding="18dp"
+            android:text="Happy"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+
+        <Button
+            android:id="@+id/excited_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/excited_button_box"
+            android:drawableTop="@drawable/ic_excited_mood"
+            android:padding="18dp"
+            android:text="Exited"
+            android:textColor="#FFFFFF"
+
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/angry_button"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/angry_button_box"
+            android:drawableTop="@drawable/ic_angry_mood"
+            android:padding="18dp"
+            android:text="Angry"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/energetic_button"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/energetic_button_box"
+            android:drawableTop="@drawable/ic_energetic_mood"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            android:paddingTop="20dp"
+            android:text="Energetic"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/neutral_button"
+            android:layout_column="1"
+            android:layout_row="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/neutral_button_box"
+            android:drawableTop="@drawable/ic_neutral_mood"
+            android:padding="18dp"
+            android:text="Neutral"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/tired_button"
+            android:layout_column="2"
+            android:layout_row="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tired_button_box"
+            android:drawableTop="@drawable/ic_tired_mood"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:padding="18dp"
+            android:text="Tired"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/nervous_button"
+            android:layout_column="0"
+            android:layout_row="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/nervous_button_box"
+            android:drawableTop="@drawable/ic_nervous_mood"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="18dp"
+            android:text="Nervous"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/bored_button"
+            android:layout_column="1"
+            android:layout_row="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/bored_button_box"
+            android:drawableTop="@drawable/ic_bored_mood"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:padding="18dp"
+            android:text="Bored"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="235dp" />
+
+        <Button
+            android:id="@+id/sad_button"
+            android:layout_column="2"
+            android:layout_row="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/sad_button_box"
+            android:drawableTop="@drawable/ic_sad_mood"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:padding="18dp"
+            android:text="Sad"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="235dp" />
+
+        <Button
+            android:id="@+id/detect_my_mood_button"
+            android:layout_row="4"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_columnSpan="3"
+            android:background="#FFAF98FC"
+            android:layout_marginBottom="35dp"
+            android:padding="10dp"
+            android:text="Detect My Mood"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            />
+
+    </GridLayout>
+
+    <include
+        android:id="@+id/menu_global"
+        layout="@layout/menu_global"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

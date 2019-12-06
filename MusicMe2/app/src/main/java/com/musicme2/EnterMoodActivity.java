@@ -18,8 +18,6 @@ public class EnterMoodActivity extends AppCompatActivity implements View.OnClick
     Button mood_nervous;
     Button mood_bored;
 
-    Button detect_mood;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +32,7 @@ public class EnterMoodActivity extends AppCompatActivity implements View.OnClick
         mood_tired = (Button) findViewById(R.id.tired_button);
         mood_nervous = (Button) findViewById(R.id.nervous_button);
         mood_bored = (Button) findViewById(R.id.bored_button);
-        detect_mood= (Button) findViewById(R.id.detect_my_mood_button);
+        Button detect_mood= findViewById(R.id.detect_my_mood_button);
 
         // <global menu buttons
         Button bMood = findViewById(R.id.buttonMood);
@@ -44,6 +42,9 @@ public class EnterMoodActivity extends AppCompatActivity implements View.OnClick
         bMood.setEnabled(false);
         bMusic.setOnClickListener(this);
         bSettings.setOnClickListener(this);
+        // global menu buttons>
+
+        detect_mood.setOnClickListener(this);
 
 
     }
@@ -64,6 +65,11 @@ public class EnterMoodActivity extends AppCompatActivity implements View.OnClick
                 break;
             case R.id.buttonSettings:
                 intent = new Intent(this, SettingActivity.class);
+                startActivity(intent);
+                finish();
+                break;
+            case R.id.detect_my_mood_button:
+                intent = new Intent(this, ShowDetectedMoodActivity.class);
                 startActivity(intent);
                 finish();
                 break;

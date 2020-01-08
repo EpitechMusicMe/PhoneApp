@@ -1,7 +1,6 @@
 # https://github.com/github/gitignore/blob/master/Android.gitignore
 # Built application files
 *.apk
-*.aar
 *.ap_
 *.aab
 

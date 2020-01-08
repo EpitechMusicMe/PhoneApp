@@ -14,7 +14,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
-        android:text="블루투스 ON"
+        android:text="Bluetooth ON"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:text="블루투스 OFF"
+        android:text="Bluetooth OFF"
         app:layout_constraintStart_toEndOf="@+id/btnBluetoothOn"
         app:layout_constraintTop_toTopOf="@+id/btnBluetoothOn" />
 
@@ -42,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
-        android:text="연결하기"
+        android:text="Connect"
         app:layout_constraintStart_toStartOf="@+id/tvBluetoothStatus"
         app:layout_constraintTop_toBottomOf="@+id/tvBluetoothStatus" />
 
@@ -60,7 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="전송"
+        android:text="Deliver"
         app:layout_constraintStart_toStartOf="@+id/btnConnect"
         app:layout_constraintTop_toBottomOf="@+id/btnConnect" />
 
@@ -75,5 +75,15 @@
         android:text="Send Data"
         app:layout_constraintStart_toEndOf="@+id/btnSendData"
         app:layout_constraintTop_toTopOf="@+id/btnSendData" />
+
+<!--    <include-->
+<!--        android:id="@+id/menu_global"-->
+<!--        layout="@layout/menu_global"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

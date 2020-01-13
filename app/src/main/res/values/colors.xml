@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorBluetooth">#2400FF</color>
+    <color name="colorGlobalMenu">#FF40C4FF</color>
 
     <color name="colorHappy">#FF81E3</color>
     <color name="colorExcited">#FF8A00</color>
@@ -15,7 +16,28 @@
     <color name="colorBored">#008D62</color>
     <color name="colorSad">#0006A0</color>
 
+    <color name="filled_section_1">#00ff80</color>
+    <color name="unfilled_section_1">#d2fde7</color>
 
+    <color name="filled_section_2">#0caf00</color>
+    <color name="unfilled_section_2">#defddc</color>
 
+    <color name="filled_section_3">#009baf</color>
+    <color name="unfilled_section_3">#d8fbff</color>
+
+    <color name="filled_section_4">#5a00af</color>
+    <color name="unfilled_section_4">#e6ccff</color>
+
+    <color name="filled_section_5">#b700ff</color>
+    <color name="unfilled_section_5">#f2cfff</color>
+
+    <color name="filled_section_6">#d94f00</color>
+    <color name="unfilled_section_6">#fedbc8</color>
+
+    <color name="filled_section_7">#ff0000</color>
+    <color name="unfilled_section_7">#fbd2d2</color>
+
+    <color name="filled_section_8">#ffe100</color>
+    <color name="unfilled_section_8">#fffbdf</color>
 
 </resources>

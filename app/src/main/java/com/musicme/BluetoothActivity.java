@@ -70,7 +70,7 @@ public class BluetoothActivity extends AppCompatActivity // implements View.OnCl
 //        Button bMood = findViewById(R.id.buttonMood);
 //        Button bMusic = findViewById(R.id.buttonMusic);
 //        Button bSettings = findViewById(R.id.buttonSettings);
-
+//
 //        bMood.setOnClickListener(this);
 //        bMusic.setOnClickListener(this);
 //        bSettings.setOnClickListener(this);
@@ -267,27 +267,27 @@ public class BluetoothActivity extends AppCompatActivity // implements View.OnCl
         }
 
     }
-//    @Override
-//    public void onClick(View v) {
-//        Intent intent;
-//        switch (v.getId()) {
-//            case R.id.buttonMood:
-//                intent = new Intent(this, EnterMoodActivity.class);
-//                startActivity(intent);
-//                finish();
-//                break;
-//            case R.id.buttonMusic:
-//                intent = new Intent(this, MusicPlayerActivity.class);
-//                startActivity(intent);
-//                finish();
-//                break;
-//            case R.id.buttonSettings:
-//                intent = new Intent(this, SettingActivity.class);
-//                startActivity(intent);
-//                finish();
-//                break;
-//        }
-//    }
+
+    public void onClick(View v) {
+        Intent intent;
+        switch (v.getId()) {
+            case R.id.buttonMood:
+                intent = new Intent(this, EnterMoodActivity.class);
+                startActivity(intent);
+                finish();
+                break;
+            case R.id.buttonMusic:
+                intent = new Intent(this, MusicPlayerActivity.class);
+                startActivity(intent);
+                finish();
+                break;
+            case R.id.buttonSettings:
+                intent = new Intent(this, SettingActivity.class);
+                startActivity(intent);
+                finish();
+                break;
+        }
+    }
 
 
 }

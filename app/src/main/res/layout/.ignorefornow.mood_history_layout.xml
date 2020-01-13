@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MoodHistoryActivity">
+
+    <com.neo.arcchartview.ArcChartView
+        android:id="@+id/arc_chart_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/view_separator"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:acv_lines_count="10"
+        app:acv_lines_width="6dp"
+        app:acv_lines_space="4dp"
+        app:acv_sections_count="8"
+        app:acv_sections_space="2dp"
+        app:acv_icon_size="32dp"
+        app:acv_mid_start_extra_offset="28dp"
+        app:acv_start_degree_offset="0"
+        app:acv_allow_setting_value_by_touch="true"
+        app:acv_allow_animations_on_set_values="true"
+        android:padding="8dp"
+        android:background="#fff"
+        />
+
+
+    <View
+        android:id="@+id/view_separator"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#000"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/sp_actions"
+        />
+
+
+    <Spinner
+        android:id="@+id/sp_actions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/sb_attrsValue"
+        app:layout_constraintRight_toLeftOf="@+id/tv_value"
+        />
+
+    <TextView
+        android:id="@+id/tv_value"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:lines="1"
+        app:layout_constraintLeft_toRightOf="@id/sp_actions"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/sp_actions"
+        app:layout_constraintBottom_toBottomOf="@id/sp_actions"
+        android:layout_marginLeft="6dp"
+        android:text="12 dp"
+        android:gravity="center"
+        android:textColor="#000"
+        android:textSize="14sp"
+        />
+
+    <SeekBar
+        android:id="@+id/sb_attrsValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@id/view_separator2"
+        />
+
+
+    <View
+        android:id="@+id/view_separator2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#000"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/sp_sections"
+        />
+
+
+
+    <TextView
+        android:id="@+id/tv_sectionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Section : "
+        android:textColor="#000"
+        app:layout_constraintTop_toTopOf="@id/sp_sections"
+        app:layout_constraintBottom_toBottomOf="@id/sp_sections"
+        app:layout_constraintLeft_toLeftOf="@id/tv_valueText"
+        />
+
+    <Spinner
+        android:id="@+id/sp_sections"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/sb_sectionsValue"
+        app:layout_constraintLeft_toRightOf="@id/tv_sectionText"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_valueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Value : "
+        android:textColor="#000"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="8dp"
+        />
+
+
+    <SeekBar
+        android:id="@+id/sb_sectionsValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/tv_valueText"
+        app:layout_constraintTop_toTopOf="@id/tv_valueText"
+        app:layout_constraintBottom_toBottomOf="@id/tv_valueText"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="16dp"
+        />
+
+
+    <Switch
+        android:id="@+id/sw_anim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/view_separator"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Animate"
+        app:layout_constraintRight_toLeftOf="@id/sw_anim"
+        app:layout_constraintTop_toTopOf="@id/sw_anim"
+        app:layout_constraintBottom_toBottomOf="@id/sw_anim"
+        android:layout_marginRight="6dp"
+        android:textColor="#000"
+        />
+
+    <TextView
+        android:id="@+id/tv_sectionsValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/view_separator"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="6dp"
+        android:textColor="#f00"
+        android:layout_margin="4dp"
+        />
+
+    <include
+        android:id="@+id/menu_global"
+        layout="@layout/menu_global"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

@@ -268,26 +268,4 @@ public class BluetoothActivity extends AppCompatActivity // implements View.OnCl
 
     }
 
-    public void onClick(View v) {
-        Intent intent;
-        switch (v.getId()) {
-            case R.id.buttonMood:
-                intent = new Intent(this, EnterMoodActivity.class);
-                startActivity(intent);
-                finish();
-                break;
-            case R.id.buttonMusic:
-                intent = new Intent(this, MusicPlayerActivity.class);
-                startActivity(intent);
-                finish();
-                break;
-            case R.id.buttonSettings:
-                intent = new Intent(this, SettingActivity.class);
-                startActivity(intent);
-                finish();
-                break;
-        }
-    }
-
-
 }

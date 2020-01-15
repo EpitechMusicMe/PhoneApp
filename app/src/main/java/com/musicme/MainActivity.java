@@ -35,4 +35,24 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, RemotePlayerActivity.class);
         startActivity(intent);
     }
+
+    public void onClick(View v) {
+        Intent intent;
+        switch (v.getId()) {
+            case R.id.buttonMood:
+                intent = new Intent(this, EnterMoodActivity.class);
+                startActivity(intent);
+                finish();
+                break;
+            case R.id.buttonMusic:
+                intent = new Intent(this, RemotePlayerActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.buttonSettings:
+                intent = new Intent(this, SettingActivity.class);
+                startActivity(intent);
+                finish();
+                break;
+        }
+    }
 }

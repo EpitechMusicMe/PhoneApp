@@ -64,7 +64,7 @@ public class EnterMoodActivity extends AppCompatActivity implements View.OnClick
                 finish();
                 break;
             case R.id.buttonSettings:
-                intent = new Intent(this, SettingActivity.class);
+                intent = new Intent(this, SettingsActivity.class);
                 startActivity(intent);
                 finish();
                 break;

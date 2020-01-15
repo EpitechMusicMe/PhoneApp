@@ -49,7 +49,7 @@ public class ShowDetectedMoodActivity extends AppCompatActivity implements View.
                 finish();
                 break;
             case R.id.buttonSettings:
-                intent = new Intent(this, SettingActivity.class);
+                intent = new Intent(this, SettingsActivity.class);
                 startActivity(intent);
                 finish();
                 break;

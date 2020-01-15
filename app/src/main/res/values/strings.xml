@@ -39,17 +39,30 @@
     <string name="title_activity_settings">Settings</string>
 
     <!-- Preference Titles -->
-    <string name="messages_header">Messages</string>
-    <string name="sync_header">Sync</string>
+    <string name="integration_header">Integration</string>
+    <string name="account_header">Account</string>
+    <string name="privacy_header">Privacy</string>
+    <string name="info_header">Info</string>
 
-    <!-- Messages Preferences -->
-    <string name="signature_title">Your signature</string>
-    <string name="reply_title">Default reply action</string>
+    <!-- Integration Preferences -->
+    <string name="bluetooth_title">Bluetooth</string>
+    <string name="bluetooth_summary">Bluetooth connect to a wearable</string>
 
-    <!-- Sync Preferences -->
-    <string name="sync_title">Sync email periodically</string>
-    <string name="attachment_title">Download incoming attachments</string>
-    <string name="attachment_summary_on">Automatically download attachments for incoming emails
-    </string>
-    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="spotify_title">Spotify</string>
+    <string name="spotify_summary">Authenticate with a Spotify account</string>
+
+    <!--    Account Preferences -->
+    <string name="delete_title">Delete</string>
+    <string name="delete_summary">Delete all mood and music history</string>
+
+    <!--    Privacy Preferences -->
+    <string name="telemetry_title">Send telemetry</string>
+    <string name="telemetry_summary">Send optional telemetry data to our private servers (see privacy policy)</string>
+
+    <!--    Info Preferences -->
+    <string name="faq_title">FAQ</string>
+    <string name="faq_summary">Frequently asked questions and app guide</string>
+
+    <string name="about_title">About Us</string>
+
 </resources>

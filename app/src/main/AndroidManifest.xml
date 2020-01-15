@@ -30,7 +30,7 @@
         </activity>
         <activity android:name=".BluetoothActivity"></activity>
         <activity
-            android:name="com.musicme.RemotePlayerActivity"
+            android:name="com.musicme.MusicPlayerActivity"
             android:exported="true"
             android:label="@string/label"
             android:screenOrientation="portrait"

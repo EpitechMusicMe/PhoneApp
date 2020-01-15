@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickSpotify(View view) {
-        Intent intent = new Intent(MainActivity.this, RemotePlayerActivity.class);
+        Intent intent = new Intent(MainActivity.this, MusicPlayerActivity.class);
         startActivity(intent);
     }
 
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.buttonMusic:
-                intent = new Intent(this, RemotePlayerActivity.class);
+                intent = new Intent(this, MusicPlayerActivity.class);
                 startActivity(intent);
                 break;
             case R.id.buttonSettings:

@@ -48,9 +48,49 @@
 
     </PreferenceCategory>
 
-    <Preference
-        app:key="bluetooth"
-        app:title="Bluetooth"
-        app:summary="Bluetooth connect to a wearable" />
+    <PreferenceCategory app:title="Integration">
+
+        <Preference
+            app:key="bluetooth"
+            app:title="Bluetooth"
+            app:summary="Bluetooth connect to a wearable" />
+
+        <Preference
+            app:key="spotify"
+            app:title="Spotify"
+            app:summary="Authenticate with a Spotify account"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Account">
+
+        <Preference
+            app:key="delete"
+            app:title="Delete"
+            app:summary="Delete all mood and music history"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Privacy">
+
+        <SwitchPreferenceCompat
+            app:key="telemetry"
+            app:title="Send telemetry"
+            app:summary="Send optional telemetry data to our private servers (see privacy policy)" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Info">
+
+        <Preference
+            app:key="faq"
+            app:title="FAQ"
+            app:summary="Frequently asked questions and app guide" />
+
+        <Preference
+            app:key="about"
+            app:title="About Us" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>

@@ -2,6 +2,7 @@ package com.musicme;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -17,6 +18,8 @@ public class EnterMoodActivity extends AppCompatActivity implements View.OnClick
     Button mood_tired;
     Button mood_nervous;
     Button mood_bored;
+
+    static String mood_button_tag = "MOODBUTTON";
 
 
     @Override
@@ -71,6 +74,19 @@ public class EnterMoodActivity extends AppCompatActivity implements View.OnClick
 //                startActivity(intent);
 //                finish();
 //                break;
+        }
+    }
+
+    public void onClickMoodButton(View view) {
+        switch (view.getId()) {
+            case R.id.happy_button:
+                Log.d("MOOD", "happy");
+                break;
+            case R.id.sad_button:
+                Log.d("MOOD", "sad");
+                break;
+            default:
+                Log.w(mood_button_tag, "Mood button press not handled.");
         }
     }
 

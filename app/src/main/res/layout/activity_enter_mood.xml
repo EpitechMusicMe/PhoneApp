@@ -42,7 +42,8 @@
             android:padding="18dp"
             android:text="Happy"
             android:textColor="#FFFFFF"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:onClick="onClickMoodButton" />
 
 
         <Button
@@ -59,8 +60,8 @@
             android:padding="18dp"
             android:text="Exited"
             android:textColor="#FFFFFF"
-
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:onClick="onClickMoodButton"/>
 
         <Button
             android:id="@+id/angry_button"
@@ -76,7 +77,8 @@
             android:padding="18dp"
             android:text="Angry"
             android:textColor="#FFFFFF"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:onClick="onClickMoodButton" />
 
         <Button
             android:id="@+id/energetic_button"
@@ -90,11 +92,11 @@
             android:layout_marginBottom="8dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-
             android:paddingTop="20dp"
             android:text="Energetic"
             android:textColor="#FFFFFF"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:onClick="onClickMoodButton" />
 
         <Button
             android:id="@+id/neutral_button"
@@ -111,7 +113,8 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:textColor="#FFFFFF"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:onClick="onClickMoodButton" />
 
         <Button
             android:id="@+id/tired_button"
@@ -126,7 +129,8 @@
             android:padding="18dp"
             android:text="Tired"
             android:textColor="#FFFFFF"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:onClick="onClickMoodButton" />
 
         <Button
             android:id="@+id/nervous_button"
@@ -144,7 +148,8 @@
             android:padding="18dp"
             android:text="Nervous"
             android:textColor="#FFFFFF"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:onClick="onClickMoodButton" />
 
         <Button
             android:id="@+id/bored_button"
@@ -163,7 +168,8 @@
             android:textColor="#FFFFFF"
             android:textSize="16sp"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="235dp" />
+            tools:layout_editor_absoluteY="235dp"
+            android:onClick="onClickMoodButton" />
 
         <Button
             android:id="@+id/sad_button"
@@ -181,7 +187,8 @@
             android:textColor="#FFFFFF"
             android:textSize="16sp"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="235dp" />
+            tools:layout_editor_absoluteY="235dp"
+            android:onClick="onClickMoodButton" />
 
         <Button
             android:id="@+id/detect_my_mood_button"
@@ -195,7 +202,7 @@
             android:text="Detect My Mood"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
-            />
+            android:onClick="onClickMoodButton" />
 
     </GridLayout>
 

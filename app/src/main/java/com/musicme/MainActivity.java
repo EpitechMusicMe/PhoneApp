@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(this, EnterMoodActivity.class);
                 startActivity(intent);
                 TextView currentMood = findViewById(R.id.current_mood_value);
-                currentMood.setText(String.valueOf(CurrentMoodState.get()));
+                currentMood.setText(CurrentMoodState.get().label());
                 break;
             case R.id.buttonMusic:
                 intent = new Intent(this, MusicPlayerActivity.class);

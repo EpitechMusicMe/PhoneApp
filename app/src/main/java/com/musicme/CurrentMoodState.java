@@ -1,13 +1,14 @@
 package com.musicme;
 
 public class CurrentMoodState {
-    public static int get() {
+
+    public static Mood get() {
         return mood;
     }
 
-    public static void set(int new_mood) {
+    public static void set(Mood new_mood) {
         mood = new_mood;
     }
 
-    private static int mood;
+    private static Mood mood = Mood.NONE;
 }

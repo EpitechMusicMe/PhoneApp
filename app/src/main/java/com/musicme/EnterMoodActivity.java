@@ -80,11 +80,12 @@ public class EnterMoodActivity extends AppCompatActivity implements View.OnClick
     public void onClickMoodButton(View view) {
         switch (view.getId()) {
             case R.id.happy_button:
-                CurrentMoodState.set(0);
+                CurrentMoodState.set(Mood.HAPPY);
                 break;
             case R.id.sad_button:
-                CurrentMoodState.set(8);
+                CurrentMoodState.set(Mood.SAD);
                 break;
+            // TODO: add remaining moods
             default:
                 Log.w(mood_button_tag, "Mood button press not handled.");
         }

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -42,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
             case R.id.buttonMood:
                 intent = new Intent(this, EnterMoodActivity.class);
                 startActivity(intent);
+                TextView currentMood = findViewById(R.id.current_mood_value);
+                currentMood.setText(String.valueOf(CurrentMoodState.get()));
                 break;
             case R.id.buttonMusic:
                 intent = new Intent(this, MusicPlayerActivity.class);

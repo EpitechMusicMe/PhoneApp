@@ -3,6 +3,10 @@
     <string name="label">MusicMe</string>
     <string name="app_name">MusicMe</string>
 
+    <!-- Main Screen -->
+    <string name="current_mood_label">Current mood:</string>
+    <string name="current_mood_value_default">None</string>
+
     <!-- Errors -->
     <string name="err_spotify_disconnected">"Spotify is not Connected. Use one of the 'connect' buttons"</string>
     <string name="err_generic_toast">An error has occurred. Check the logs to know more.</string>

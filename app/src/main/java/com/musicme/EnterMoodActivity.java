@@ -22,7 +22,7 @@ public class EnterMoodActivity extends AppCompatActivity implements View.OnClick
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.enter_mood_layout);
+        setContentView(R.layout.activity_enter_mood);
 
         mood_happy = (Button) findViewById(R.id.happy_button);
         mood_excited = (Button) findViewById(R.id.excited_button);
@@ -32,21 +32,19 @@ public class EnterMoodActivity extends AppCompatActivity implements View.OnClick
         mood_tired = (Button) findViewById(R.id.tired_button);
         mood_nervous = (Button) findViewById(R.id.nervous_button);
         mood_bored = (Button) findViewById(R.id.bored_button);
-        Button detect_mood= findViewById(R.id.detect_my_mood_button);
-
-        // <global menu buttons
-        Button bMood = findViewById(R.id.buttonMood);
-        Button bMusic = findViewById(R.id.buttonMusic);
-        Button bSettings = findViewById(R.id.buttonSettings);
-
-        bMood.setEnabled(false);
-        bMusic.setOnClickListener(this);
-        bSettings.setOnClickListener(this);
-        // global menu buttons>
-
+        Button detect_mood = findViewById(R.id.detect_my_mood_button);
+//
+//        // <global menu buttons
+//        Button bMood = findViewById(R.id.buttonMood);
+//        Button bMusic = findViewById(R.id.buttonMusic);
+//        Button bSettings = findViewById(R.id.buttonSettings);
+//
+//        bMood.setEnabled(false);
+//        bMusic.setOnClickListener(this);
+//        bSettings.setOnClickListener(this);
+//        // global menu buttons>
+//
         detect_mood.setOnClickListener(this);
-
-
     }
 
     @Override
@@ -68,11 +66,11 @@ public class EnterMoodActivity extends AppCompatActivity implements View.OnClick
                 startActivity(intent);
                 finish();
                 break;
-            case R.id.detect_my_mood_button:
-                intent = new Intent(this, ShowDetectedMoodActivity.class);
-                startActivity(intent);
-                finish();
-                break;
+//            case R.id.detect_my_mood_button:
+//                intent = new Intent(this, ShowDetectedMoodActivity.class);
+//                startActivity(intent);
+//                finish();
+//                break;
         }
     }
 

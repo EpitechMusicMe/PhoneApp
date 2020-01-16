@@ -37,7 +37,13 @@
             android:exported="true"
             android:label="@string/label"
             android:screenOrientation="portrait"
-            android:theme="@style/RemotePlayerTheme"></activity>
+            android:theme="@style/RemotePlayerTheme">
+        </activity>
+
+        <activity
+            android:name=".EnterMoodActivity">
+        </activity>
+
     </application>
 
 </manifest>

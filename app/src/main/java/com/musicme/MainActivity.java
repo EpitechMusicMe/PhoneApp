@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.buttonMood:
                 intent = new Intent(this, EnterMoodActivity.class);
                 startActivity(intent);
-                finish();
                 break;
             case R.id.buttonMusic:
                 intent = new Intent(this, MusicPlayerActivity.class);
@@ -51,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.buttonSettings:
                 intent = new Intent(this, SettingsActivity.class);
                 startActivity(intent);
-                finish();
                 break;
         }
     }

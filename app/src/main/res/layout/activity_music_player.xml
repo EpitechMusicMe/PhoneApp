@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+<!--    android:background="@color/cardview_light_background"-->
+
 
     <!-- Player Context -->
 
@@ -269,10 +271,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
+        android:layout_marginBottom="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
@@ -305,120 +306,5 @@
             android:onClick="onDisconnectClicked"
             android:text="@string/disconnect" />
     </LinearLayout>
-
-    <HorizontalScrollView
-        android:id="@+id/horizontalScrollView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/connect_switch_to_local"
-                style="@style/Widget.Cat.Button.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:filterTouchesWhenObscured="false"
-                android:onClick="onConnectSwitchToLocalClicked"
-                android:text="@string/connect_switch_to_local" />
-
-            <Button
-                android:id="@+id/play_podcast_button"
-                style="@style/Widget.Cat.Button.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:filterTouchesWhenObscured="false"
-                android:onClick="onPlayPodcastButtonClicked"
-                android:text="@string/play_podcast_button_label" />
-
-            <Button
-                android:id="@+id/play_track_button"
-                style="@style/Widget.Cat.Button.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:filterTouchesWhenObscured="false"
-                android:onClick="onPlayTrackButtonClicked"
-                android:text="@string/play_track_button_label" />
-
-            <Button
-                android:id="@+id/play_album_button"
-                style="@style/Widget.Cat.Button.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:filterTouchesWhenObscured="false"
-                android:onClick="onPlayAlbumButtonClicked"
-                android:text="@string/play_album_button_label" />
-
-            <Button
-                android:id="@+id/play_artist_button"
-                style="@style/Widget.Cat.Button.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:filterTouchesWhenObscured="false"
-                android:onClick="onPlayArtistButtonClicked"
-                android:text="@string/play_artist_button_label" />
-
-            <Button
-                android:id="@+id/play_playlist_button"
-                style="@style/Widget.Cat.Button.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:filterTouchesWhenObscured="false"
-                android:onClick="onPlayPlaylistButtonClicked"
-                android:text="@string/play_playlist_button_label" />
-
-            <Button
-                android:id="@+id/get_fitness_recommended_items_button"
-                style="@style/Widget.Cat.Button.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:filterTouchesWhenObscured="false"
-                android:onClick="onGetFitnessRecommendedContentItemsClicked"
-                android:text="@string/browse_content" />
-
-            <Button
-                android:id="@+id/subscribe_to_capabilities"
-                style="@style/Widget.Cat.Button.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:filterTouchesWhenObscured="false"
-                android:onClick="onSubscribeToCapabilitiesClicked"
-                android:text="@string/subscribe_to_capabilities" />
-
-            <Button
-                android:id="@+id/get_collection_state"
-                style="@style/Widget.Cat.Button.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:filterTouchesWhenObscured="false"
-                android:onClick="onGetCollectionStateClicked"
-                android:text="@string/get_collection_state" />
-
-            <Button
-                android:id="@+id/remove_uri"
-                style="@style/Widget.Cat.Button.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:filterTouchesWhenObscured="false"
-                android:onClick="onRemoveUriClicked"
-                android:text="@string/remove_uri" />
-
-            <Button
-                android:id="@+id/save_uri"
-                style="@style/Widget.Cat.Button.Small"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:filterTouchesWhenObscured="false"
-                android:onClick="onSaveUriClicked"
-                android:text="@string/save_uri" />
-        </LinearLayout>
-    </HorizontalScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

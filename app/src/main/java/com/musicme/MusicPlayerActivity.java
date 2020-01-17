@@ -249,17 +249,6 @@ public class MusicPlayerActivity extends FragmentActivity {
             findViewById(R.id.skip_next_button),
             mToggleRepeatButton,
             mToggleShuffleButton,
-            findViewById(R.id.connect_switch_to_local),
-            findViewById(R.id.play_podcast_button),
-            findViewById(R.id.play_track_button),
-            findViewById(R.id.play_album_button),
-            findViewById(R.id.play_artist_button),
-            findViewById(R.id.play_playlist_button),
-            findViewById(R.id.subscribe_to_capabilities),
-            findViewById(R.id.get_collection_state),
-            findViewById(R.id.remove_uri),
-            findViewById(R.id.save_uri),
-            findViewById(R.id.get_fitness_recommended_items_button),
             mSeekBar);
 
     SpotifyAppRemote.setDebugMode(true);
@@ -426,26 +415,6 @@ public class MusicPlayerActivity extends FragmentActivity {
               })
           .setErrorCallback(mErrorCallback);
     }
-  }
-
-  public void onPlayPodcastButtonClicked(View view) {
-    playUri(PODCAST_URI);
-  }
-
-  public void onPlayTrackButtonClicked(View view) {
-    playUri(TRACK_URI);
-  }
-
-  public void onPlayAlbumButtonClicked(View view) {
-    playUri(ALBUM_URI);
-  }
-
-  public void onPlayArtistButtonClicked(View view) {
-    playUri(ARTIST_URI);
-  }
-
-  public void onPlayPlaylistButtonClicked(View view) {
-    playUri(PLAYLIST_URI);
   }
 
   private void playUri(String uri) {
@@ -721,7 +690,7 @@ public class MusicPlayerActivity extends FragmentActivity {
   private void logMessage(String msg) {
     Log.d(TAG, msg);
   }
-  
+
   private void showDialog(String title, String message) {
     new AlertDialog.Builder(this).setTitle(title).setMessage(message).create().show();
   }

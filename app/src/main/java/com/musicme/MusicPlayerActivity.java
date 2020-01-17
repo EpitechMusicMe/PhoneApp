@@ -67,11 +67,6 @@ public class MusicPlayerActivity extends FragmentActivity {
 
   private static final String TAG = MusicPlayerActivity.class.getSimpleName();
 
-//  private static final String CLIENT_ID = "089d841ccc194c10a77afad9e1c11d54";
-//  private static final String REDIRECT_URI = "comspotifytestsdk://callback";
-  public static final String CLIENT_ID = "5f2f2cd771174cfcb2e3a8433c47935c";
-  public static final String REDIRECT_URI = "musicme://auth/callback/";
-
   private static final String TRACK_URI = "spotify:track:4IWZsfEkaK49itBwCTFDXQ";
   private static final String ALBUM_URI = "spotify:album:4nZ5wPL5XxSY2OuDgbnYdc";
   private static final String ARTIST_URI = "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2";
@@ -337,8 +332,8 @@ public class MusicPlayerActivity extends FragmentActivity {
 
     SpotifyAppRemote.connect(
         getApplication(),
-        new ConnectionParams.Builder(CLIENT_ID)
-            .setRedirectUri(REDIRECT_URI)
+        new ConnectionParams.Builder(Secrets.CLIENT_ID)
+            .setRedirectUri(Secrets.REDIRECT_URI)
             .showAuthView(showAuthView)
             .build(),
         new Connector.ConnectionListener() {
@@ -724,14 +719,9 @@ public class MusicPlayerActivity extends FragmentActivity {
   }
 
   private void logMessage(String msg) {
-    logMessage(msg, Toast.LENGTH_SHORT);
-  }
-
-  private void logMessage(String msg, int duration) {
-    Toast.makeText(this, msg, duration).show();
     Log.d(TAG, msg);
   }
-
+  
   private void showDialog(String title, String message) {
     new AlertDialog.Builder(this).setTitle(title).setMessage(message).create().show();
   }

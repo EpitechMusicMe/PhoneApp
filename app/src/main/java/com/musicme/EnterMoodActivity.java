@@ -82,10 +82,30 @@ public class EnterMoodActivity extends AppCompatActivity implements View.OnClick
             case R.id.happy_button:
                 CurrentMoodState.set(Mood.HAPPY);
                 break;
+            case R.id.excited_button:
+                CurrentMoodState.set(Mood.EXCITED);
+                break;
+            case R.id.angry_button:
+                CurrentMoodState.set(Mood.ANGRY);
+                break;
+            case R.id.energetic_button:
+                CurrentMoodState.set(Mood.ENERGETIC);
+                break;
+            case R.id.neutral_button:
+                CurrentMoodState.set(Mood.NEUTRAL);
+                break;
+            case R.id.tired_button:
+                CurrentMoodState.set(Mood.TIRED);
+                break;
+            case R.id.nervous_button:
+                CurrentMoodState.set(Mood.NERVOUS);
+                break;
+            case R.id.bored_button:
+                CurrentMoodState.set(Mood.BORED);
+                break;
             case R.id.sad_button:
                 CurrentMoodState.set(Mood.SAD);
                 break;
-            // TODO: add remaining moods
             default:
                 Log.w(mood_button_tag, "Mood button press not handled.");
         }

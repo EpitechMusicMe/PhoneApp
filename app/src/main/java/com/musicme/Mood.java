@@ -2,9 +2,14 @@ package com.musicme;
 
 public enum Mood {
     HAPPY ("Happy"),
-    SAD ("Sad"),
-    NONE ("None");
-    // TODO: add the remaining moods
+    EXCITED("Excited"),
+    ANGRY("Angry"),
+    ENERGETIC("Energetic"),
+    NEUTRAL("Neutral"),
+    TIRED("Tired"),
+    NERVOUS("Nervous"),
+    BORED("Bored"),
+    SAD ("Sad");
 
     private final String label;
 

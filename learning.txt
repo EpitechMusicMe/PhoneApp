@@ -1,0 +1,35 @@
+Spotify API usage in MusicMe:
+
+Parts of Spotify for developers:
+- Web Playback SDK - for playing songs ON THE WEB.
+- Android SDK (Spotify App Remote) - for playings songs ON MOBILE by connecting to an existing Spotify app.
+- Web API - REST HTTP API
+
+Android SDK has two parts:
+- Authentication SDK - auth, need to ask for permission, i.e. for remote playback.
+- App Remote SDK - remote playback, includes auth with limited permissions.
+
+
+Steps:
+0. Organise Git repo
+1. Follow tutorial at https://developer.spotify.com/documentation/android/quick-start/
+    - register fingerprints
+	-> https://stackoverflow.com/questions/27609442/how-to-get-the-sha-1-fingerprint-certificate-in-android-studio-for-debug-mode
+    - dependencies
+	-> add .aar files
+	- need to fix auth dep
+    - auth
+        - display user's name
+    - connect to SpotifyAppRemote with Connector and disconnect after
+    - play from uri using PlayerApi
+    - get track image using ImagesApi
+    - modify user's library with song played using UserApi
+    - retrieve uri using Spotify API (Web API)
+        - see wrapper https://github.com/kaaes/spotify-web-api-android
+2. Alternative if user does not have Spotify (not installed OR no account) - show screen
+3. Window flow for the app
+    - splash -> bluetooth -> spotify -> main -> player
+    - managing state to skip between screens, i.e. isSpotifyConnected or isBluetoothConnected
+4. UI for the music player***
+5.  Secure credentials storage like client-id
+    -> https://medium.com/google-developer-experts/a-follow-up-on-how-to-store-tokens-securely-in-android-e84ac5f15f17

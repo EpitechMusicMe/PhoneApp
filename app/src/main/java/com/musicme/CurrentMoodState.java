@@ -10,5 +10,5 @@ public class CurrentMoodState {
         mood = new_mood;
     }
 
-    private static Mood mood = Mood.NEUTRAL;
+    private static Mood mood = Mood.NONE;
 }

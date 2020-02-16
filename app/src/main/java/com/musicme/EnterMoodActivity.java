@@ -5,10 +5,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class EnterMoodActivity extends AppCompatActivity implements View.OnClickListener {
+
+    Mood_History_Activity md_hist = new Mood_History_Activity();
+    static int hap=0,exc=0,ang=0,ene=0,neu=0,tir=0,ner=0,bor=0,sad=0;
 
     Button mood_happy;
     Button mood_excited;
@@ -78,33 +82,80 @@ public class EnterMoodActivity extends AppCompatActivity implements View.OnClick
     }
 
     public void onClickMoodButton(View view) {
+        Intent intent;
+
         switch (view.getId()) {
             case R.id.happy_button:
                 CurrentMoodState.set(Mood.HAPPY);
+                hap+=1;
+                Mood_History_Activity.set_count("hap",hap);
+                intent = new Intent(this, Mood_History_Activity.class);
+                startActivity(intent);
+                finish();
                 break;
             case R.id.excited_button:
                 CurrentMoodState.set(Mood.EXCITED);
+                exc+=1;
+                Mood_History_Activity.set_count("exc",exc);
+                intent = new Intent(this, Mood_History_Activity.class);
+                startActivity(intent);
+                finish();
                 break;
             case R.id.angry_button:
                 CurrentMoodState.set(Mood.ANGRY);
+                ang+=1;
+                Mood_History_Activity.set_count("ang",ang);
+                intent = new Intent(this, Mood_History_Activity.class);
+                startActivity(intent);
+                finish();
                 break;
             case R.id.energetic_button:
                 CurrentMoodState.set(Mood.ENERGETIC);
+                ene+=1;
+                Mood_History_Activity.set_count("ene",ene);
+                intent = new Intent(this, Mood_History_Activity.class);
+                startActivity(intent);
+                finish();
                 break;
             case R.id.neutral_button:
                 CurrentMoodState.set(Mood.NEUTRAL);
+                neu+=1;
+                Mood_History_Activity.set_count("neu",neu);
+                intent = new Intent(this, Mood_History_Activity.class);
+                startActivity(intent);
+                finish();
                 break;
             case R.id.tired_button:
                 CurrentMoodState.set(Mood.TIRED);
+                tir+=1;
+                Mood_History_Activity.set_count("tir",tir);
+                intent = new Intent(this, Mood_History_Activity.class);
+                startActivity(intent);
+                finish();
                 break;
             case R.id.nervous_button:
                 CurrentMoodState.set(Mood.NERVOUS);
+                ner+=1;
+                Mood_History_Activity.set_count("ner",ner);
+                intent = new Intent(this, Mood_History_Activity.class);
+                startActivity(intent);
+                finish();
                 break;
             case R.id.bored_button:
                 CurrentMoodState.set(Mood.BORED);
+                bor+=1;
+                Mood_History_Activity.set_count("bor",bor);
+                intent = new Intent(this, Mood_History_Activity.class);
+                startActivity(intent);
+                finish();
                 break;
             case R.id.sad_button:
                 CurrentMoodState.set(Mood.SAD);
+                sad+=1;
+                Mood_History_Activity.set_count("sad",sad);
+                intent = new Intent(this, Mood_History_Activity.class);
+                startActivity(intent);
+                finish();
                 break;
             default:
                 Log.w(mood_button_tag, "Mood button press not handled.");

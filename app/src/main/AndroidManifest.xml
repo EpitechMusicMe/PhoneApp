@@ -44,6 +44,10 @@
             android:name=".EnterMoodActivity">
         </activity>
 
+        <activity
+            android:name=".Mood_History_Activity">
+        </activity>
+
     </application>
 
 </manifest>

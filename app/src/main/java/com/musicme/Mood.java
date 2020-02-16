@@ -9,7 +9,8 @@ public enum Mood {
     TIRED("Tired"),
     NERVOUS("Nervous"),
     BORED("Bored"),
-    SAD ("Sad");
+    SAD ("Sad"),
+    NONE("None");
 
     private final String label;
 

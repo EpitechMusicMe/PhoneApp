@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
-
+    //TextView currentMood = findViewById(R.id.current_mood_value);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        TextView currentMood = findViewById(R.id.current_mood_value);
+        currentMood.setText(CurrentMoodState.get().label());
     }
 
     @Override
@@ -43,8 +45,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.buttonMood:
                 intent = new Intent(this, EnterMoodActivity.class);
                 startActivity(intent);
-                TextView currentMood = findViewById(R.id.current_mood_value);
-                currentMood.setText(CurrentMoodState.get().label());
                 break;
             case R.id.buttonMusic:
                 intent = new Intent(this, MusicPlayerActivity.class);

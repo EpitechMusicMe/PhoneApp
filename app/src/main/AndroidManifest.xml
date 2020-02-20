@@ -48,6 +48,10 @@
             android:name=".Mood_History_Activity">
         </activity>
 
+        <activity
+            android:name=".ShowDetectedMoodActivity">
+        </activity>
+
     </application>
 
 </manifest>

@@ -73,11 +73,11 @@ public class EnterMoodActivity extends AppCompatActivity implements View.OnClick
                 startActivity(intent);
                 finish();
                 break;
-//            case R.id.detect_my_mood_button:
-//                intent = new Intent(this, ShowDetectedMoodActivity.class);
-//                startActivity(intent);
-//                finish();
-//                break;
+            case R.id.detect_my_mood_button:
+                intent = new Intent(this, ShowDetectedMoodActivity.class);
+                startActivity(intent);
+                finish();
+                break;
         }
     }
 

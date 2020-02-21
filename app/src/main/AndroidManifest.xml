@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
     <application
+        android:name=".BPM_state"
         android:allowBackup="false"
         android:exported="true"
         android:icon="@mipmap/ic_launcher"
@@ -51,6 +52,10 @@
         <activity
             android:name=".ShowDetectedMoodActivity">
         </activity>
+
+
+
+
 
     </application>
 

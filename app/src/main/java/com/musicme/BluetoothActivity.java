@@ -212,7 +212,7 @@ public class BluetoothActivity extends AppCompatActivity // implements View.OnCl
         }
     }
 
-    private class ConnectedBluetoothThread extends Thread {
+    public class ConnectedBluetoothThread extends Thread {
         private final BluetoothSocket mmSocket;
         private final InputStream mmInStream;
         private final OutputStream mmOutStream;

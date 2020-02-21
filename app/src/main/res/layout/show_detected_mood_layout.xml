@@ -28,6 +28,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/tvBluetoothStatus"
+        android:layout_width="170dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:text="status"
+        app:layout_constraintStart_toStartOf="@+id/btnBluetoothOn"
+        app:layout_constraintTop_toBottomOf="@+id/btnBluetoothOn" />
+
+
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
@@ -42,39 +53,58 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="280dp" />
 
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:paddingLeft="@dimen/activity_horizontal_margin"-->
+<!--        android:paddingRight="@dimen/activity_horizontal_margin"-->
+<!--        tools:context="com.ssaurel.testgraphview.MainActivity"-->
+<!--        >-->
+
+        <!-- we add graph view to display -->
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/graph"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guideline3"/>
+
+<!--    </RelativeLayout>-->
+
     <TextView
         android:id="@+id/areyou"
         android:layout_width="207dp"
         android:layout_height="34dp"
-        android:text="Are you"
+        android:text="                   BPM Graph"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline3" />
 
-    <TextView
-        android:id="@+id/detected_mood"
-        android:layout_width="120dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="60dp"
-        android:drawableStart="@drawable/ic_happy_mood"
-        android:drawablePadding="20dp"
-        android:text="happy"
-        android:textAlignment="center"
-        android:gravity="center|right"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.45"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+<!--    <TextView-->
+<!--        android:id="@+id/detected_mood"-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_marginTop="60dp"-->
+<!--        android:drawableStart="@drawable/ic_happy_mood"-->
+<!--        android:drawablePadding="20dp"-->
+<!--        android:text="happy"-->
+<!--        android:textAlignment="center"-->
+<!--        android:gravity="center|right"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.45"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guideline3" />-->
 
-    <TextView
-        android:id="@+id/now"
-        android:layout_width="71dp"
-        android:layout_height="46dp"
-        android:text="now?"
-        app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.815"
-        app:layout_constraintStart_toStartOf="parent" />
+<!--    <TextView-->
+<!--        android:id="@+id/now"-->
+<!--        android:layout_width="71dp"-->
+<!--        android:layout_height="46dp"-->
+<!--        android:text="now?"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/guideline4"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.815"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
 
     <TextView
         android:id="@+id/bpm"
@@ -92,7 +122,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="432dp" />
+        app:layout_constraintGuide_begin="560dp" />
 
     <include
         android:id="@+id/menu_global"
@@ -121,7 +151,6 @@
         android:layout_marginStart="172dp"
         android:layout_marginBottom="28dp"
         android:textSize="40dp"
-        android:text="84"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -130,53 +159,44 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="515dp" />
+        app:layout_constraintGuide_begin="600dp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tvReceiveData"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/guideline6"
-        >
+        android:layout_marginTop="10dp"
+        android:text="Receive"
+        android:textColor="@color/cat_button_text_default"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/button_Save_Mood"
-            style="@style/ButtonStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Save" />
-
-        <Button
-            android:id="@+id/button_remeasure_mood"
-            style="@style/ButtonStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Remeasure" />
-
-    </LinearLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        tools:context="com.ssaurel.testgraphview.MainActivity" >
-
-        <!-- we add graph view to display -->
-        <com.jjoe64.graphview.GraphView
-            android:id="@+id/graph"
-            android:layout_width="match_parent"
-            android:layout_height="300dp" />
-
-    </RelativeLayout>
-<!--    <RelativeLayout-->
+<!--    <LinearLayout-->
 <!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:id="@+id/mainLayout">-->
-<!--        </RelativeLayout>-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/guideline6"-->
+<!--        >-->
+
+<!--        <Button-->
+<!--            android:id="@+id/button_Save_Mood"-->
+<!--            style="@style/ButtonStyle"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Save" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/button_remeasure_mood"-->
+<!--            style="@style/ButtonStyle"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Remeasure" />-->
+
+<!--    </LinearLayout>-->
+
 
 
 
